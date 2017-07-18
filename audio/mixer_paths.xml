@@ -153,6 +153,16 @@
 		<ctl name="INTERNAL_BT_SCO_RX_Voice Mixer Voip" value="1" />
 		<ctl name="Voip_Tx Mixer INTERNAL_BT_SCO_TX_Voip" value="1" />
 	</path>
+
+	<!-- low latency recording -->
+	<path name="low-latency-record">
+		<ctl name="MultiMedia5 Mixer SLIM_0_TX" value="1" />
+	</path>
+
+	<path name="low-latency-record usb-headset-mic">
+		<ctl name="MultiMedia5 Mixer AFE_PCM_TX" value="1" />
+	</path>
+
 	<!-- end of Verb -->
 
 	<!-- ================================================================ -->
