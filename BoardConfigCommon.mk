@@ -40,9 +40,6 @@ BUILD_FINGERPRINT := samsung/matissewifixx/matissewifi:5.0.2/LRX22G/T530XXS1BRH1
 # Camera
 TARGET_NEEDS_TEXT_RELOCATIONS := true
 
-# Extended Filesystem Support
-TARGET_EXFAT_DRIVER := sdfat
-
 # HIDL
 DEVICE_MANIFEST_FILE += $(COMMON_PATH)/manifest.xml
 
