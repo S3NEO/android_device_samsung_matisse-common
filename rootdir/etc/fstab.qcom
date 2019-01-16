@@ -2,14 +2,18 @@
 # The filesystem that contains the filesystem checker binary (typically /system) cannot
 # specify MF_CHECK, and must come before any filesystems that do specify MF_CHECK
 
+# TODO: Add 'check' as fs_mgr_flags with data partition.
+# Currently we dont have e2fsck compiled. So fs check would failed.
+# NOTE: fstab.aosp_common is used for aosp. Make changes there as well.
+
 #<src>                                              <mnt_point>     <type>  <mnt_flags and options>                                                                         <fs_mgr_flags>
-/dev/block/platform/msm_sdcc.1/by-name/system       /system         ext4    ro,barrier=1,errors=panic                                                                       wait,recoveryonly
+/dev/block/platform/msm_sdcc.1/by-name/system       /system         ext4    ro,barrier=1,errors=panic                                                                       wait,first_stage_mount
 /dev/block/platform/msm_sdcc.1/by-name/userdata     /data           ext4    nosuid,nodev,noatime,noauto_da_alloc,errors=continue,commit=20                                                  wait,check,formattable,encryptable=footer,length=-16384
 /dev/block/platform/msm_sdcc.1/by-name/cache        /cache          ext4    nosuid,nodev,noatime,noauto_da_alloc,errors=continue,commit=20                                                  wait,check,formattable
 /dev/block/platform/msm_sdcc.1/by-name/apnhlos      /firmware       sdfat   ro,shortname=lower,uid=1000,gid=1026,dmask=222,fmask=333						                            wait
 /dev/block/platform/msm_sdcc.1/by-name/modem        /firmware-modem sdfat   ro,shortname=lower,uid=1000,gid=1026,dmask=227,fmask=337						                            wait
 /dev/block/platform/msm_sdcc.1/by-name/persist      /persist        ext4    nosuid,nodev,noatime,noauto_da_alloc,journal_async_commit,errors=panic                          wait,check
-/dev/block/platform/msm_sdcc.1/by-name/efs          /efs            ext4    nosuid,nodev,noatime,noauto_da_alloc,journal_async_commit,errors=panic                          wait,check
+/dev/block/platform/msm_sdcc.1/by-name/efs          /efs            ext4    nosuid,nodev,noatime,noauto_da_alloc,journal_async_commit,errors=panic                          wait,check,first_stage_mount
 /dev/block/platform/msm_sdcc.1/by-name/fota         /misc           emmc    defaults                                                                                        defaults
 
 /dev/block/platform/msm_sdcc.1/by-name/boot         /boot           emmc    defaults                                                                                        defaults
