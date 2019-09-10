@@ -88,6 +88,13 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/sensors/_hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/_hals.conf
 
+# Shims
+PRODUCT_PACKAGES += \
+    libshim_binder
+
+# Shipping API level
+$(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_k.mk)
+
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
@@ -97,7 +104,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/thermal-engine-8226.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine-8226.conf
 
 # Get non-open-source specific aspects
-$(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_k.mk)
 $(call inherit-product-if-exists, vendor/samsung/matisse-common/matisse-common-vendor.mk)
 
 # common msm8226
