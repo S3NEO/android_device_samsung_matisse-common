@@ -44,43 +44,43 @@ void vendor_load_properties()
 
     if (bootloader.find("T530XX") == 0) {
         /* matissewifixx */
-        property_override_dual("ro.build.fingerprint", "ro.vendor.build.fingerprint", "samsung/matissewifixx/matissewifi:5.0.2/LRX22G/T530XXS1BRH1:user/release-keys");
-        property_override("ro.bootimage.build.fingerprint", "samsung/matissewifixx/matissewifi:5.0.2/LRX22G/T530XXS1BRH1:user/release-keys");
+        set_ro_build_prop("fingerprint", "samsung/matissewifixx/matissewifi:5.0.2/LRX22G/T530XXS1BRH1:user/release-keys");
+        set_ro_product_prop("name", "matissewifixx");
         property_override("ro.build.description", "matissewifixx-user 5.0.2 LRX22G T530XXS1BRH1 release-keys");
-        property_override_dual("ro.product.model", "ro.vendor.product.model", "SM-T530");
-        property_override_dual("ro.product.device", "ro.vendor.product.device", "matissewifi");
+        set_ro_product_prop("model", "SM-T530");
+        set_ro_product_prop("device", "matissewifi");
         wifi_properties("wifi-only", "1");
     } else if (bootloader.find("T530NU") == 0) {
         /* matissewifiue */
-        property_override_dual("ro.build.fingerprint", "ro.vendor.build.fingerprint", "samsung/matissewifiue/matissewifiue:5.0.2/LRX22G/T530NUUEU1BQC1:user/release-keys");
-        property_override("ro.bootimage.build.fingerprint", "samsung/matissewifiue/matissewifiue:5.0.2/LRX22G/T530NUUEU1BQC1:user/release-keys");
+        set_ro_build_prop("fingerprint", "samsung/matissewifiue/matissewifiue:5.0.2/LRX22G/T530NUUEU1BQC1:user/release-keys");
+        set_ro_product_prop("name", "matissewifiue");
         property_override("ro.build.description", "matissewifiue-user 5.0.2 LRX22G T530NUUEU1BQC1 release-keys");
-        property_override_dual("ro.product.model", "ro.vendor.product.model", "SM-T530NU");
-        property_override_dual("ro.product.device", "ro.vendor.product.device", "matissewifi");
+        set_ro_product_prop("model", "SM-T530NU");
+        set_ro_product_prop("device", "matissewifi");
         wifi_properties("wifi-only", "1");
     } else if (bootloader.find("T531XX") == 0) {
         /* matisse3gxx */
-        property_override_dual("ro.build.fingerprint", "ro.vendor.build.fingerprint", "samsung/matisse3gxx/matisse3g:5.0.2/LRX22G/T531XXS1BRH1:user/release-keys");
-        property_override("ro.bootimage.build.fingerprint", "samsung/matisse3gxx/matisse3g:5.0.2/LRX22G/T531XXS1BRH1:user/release-keys");
+        set_ro_build_prop("fingerprint", "samsung/matisse3gxx/matisse3g:5.0.2/LRX22G/T531XXS1BRH1:user/release-keys");
+        set_ro_product_prop("name", "matisse3gxx");
         property_override("ro.build.description", "matisse3gxx-user 5.0.2 LRX22G T531XXS1BRH1 release-keys");
-        property_override_dual("ro.product.model", "ro.vendor.product.model", "SM-T531");
-        property_override_dual("ro.product.device", "ro.vendor.product.device", "matisse3g");
+        set_ro_product_prop("model", "SM-T531");
+        set_ro_product_prop("device", "matisse3g");
         gsm_properties("3", "0");
     } else if (bootloader.find("T532XX") == 0) {
         /* matisse3gjvxx */
-        property_override_dual("ro.build.fingerprint", "ro.vendor.build.fingerprint", "samsung/matisse3gjv/matisse3g:5.0.2/LRX22G/T532JVS1BQB1:user/release-keys");
-        property_override("ro.bootimage.build.fingerprint", "samsung/matisse3gjv/matisse3g:5.0.2/LRX22G/T532JVS1BQB1:user/release-keys");
+        set_ro_build_prop("fingerprint", "samsung/matisse3gjv/matisse3g:5.0.2/LRX22G/T532JVS1BQB1:user/release-keys");
+        set_ro_product_prop("name", "matisse3gjvxx");
         property_override("ro.build.description", "matisse3gjv-user 5.0.2 LRX22G T532JVS1BQB1 release-keys");
-        property_override_dual("ro.product.model", "ro.vendor.product.model", "SM-T532");
-        property_override_dual("ro.product.device", "ro.vendor.product.device", "matisse3gjv");
+        set_ro_product_prop("model", "SM-T532");
+        set_ro_product_prop("device", "matisse3gjv");
         gsm_properties("3", "0");
     } else if (bootloader.find("T535XX") == 0) {
         /* matisseltexx */
-        property_override_dual("ro.build.fingerprint", "ro.vendor.build.fingerprint", "samsung/matisseltexx/matisselte:5.0.2/LRX22G/T535XXS1BRJ2:user/release-keys");
-        property_override("ro.bootimage.build.fingerprint", "samsung/matisseltexx/matisselte:5.0.2/LRX22G/T535XXS1BRJ2:user/release-keys");
+        set_ro_build_prop("fingerprint", "samsung/matisseltexx/matisselte:5.0.2/LRX22G/T535XXS1BRJ2:user/release-keys");
+        set_ro_product_prop("name", "matisseltexx");
         property_override("ro.build.description", "matisseltexx-user 5.0.2 LRX22G T535XXS1BRJ2 release-keys");
-        property_override_dual("ro.product.model", "ro.vendor.product.model", "SM-T535");
-        property_override_dual("ro.product.device", "ro.vendor.product.device", "matisselte");
+        set_ro_product_prop("model", "SM-T535");
+        set_ro_product_prop("device", "matisselte");
         gsm_properties("9", "1");
     } else {
         wifi_properties("wifi-only", "1");
