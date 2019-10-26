@@ -54,6 +54,7 @@ persist.demo.hdmirotationlock=false
 debug.hwui.use_buffer_age=false
 
 # Media
+debug.stagefright.ccodec=0
 media.stagefright.legacyencoder=true
 media.stagefright.less-secure=true
 media.stagefright.enable-player=true
