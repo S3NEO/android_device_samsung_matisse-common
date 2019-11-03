@@ -54,10 +54,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     FlipFlap
 
-# IPv6 tethering
+# FM
 PRODUCT_PACKAGES += \
-    ebtables \
-    ethertypes
+    FMRadio
 
 # Keylayouts
 PRODUCT_COPY_FILES += \
