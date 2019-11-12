@@ -16,12 +16,9 @@
 # inherit from common msm8226
 -include device/samsung/msm8226-common/BoardConfigCommon.mk
 
-COMMON_PATH := device/samsung/s3ve3g-common
+COMMON_PATH := device/samsung/matisse-common
 
 TARGET_SPECIFIC_HEADER_PATH := $(COMMON_PATH)/include
-
-# Assert
-TARGET_OTA_ASSERT_DEVICE := s3ve3g,s3ve3gds,s3ve3gjv,s3ve3gxx
 
 # Audio
 USE_CUSTOM_AUDIO_POLICY := 1
@@ -43,13 +40,9 @@ TARGET_EXFAT_DRIVER := sdfat
 # HIDL
 DEVICE_MANIFEST_FILE += $(COMMON_PATH)/manifest.xml
 
-# FM
-BOARD_HAVE_QCOM_FM := true
-TARGET_QCOM_NO_FM_FIRMWARE := true 
-
 # Kernel
 BOARD_KERNEL_BASE := 0x00000000
-BOARD_KERNEL_CMDLINE := console=null androidboot.hardware=qcom msm_rtb.filter=0x37 zcache.enabled=1 zcache.compressor=lz4 maxcpus=1
+BOARD_KERNEL_CMDLINE := console=null androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x37 ehci-hcd.park=3 zcache.enabled=1 zcache.compressor=lz4 maxcpus=1
 BOARD_KERNEL_IMAGE_NAME := zImage
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_KERNEL_SEPARATED_DT := true
@@ -70,9 +63,9 @@ TARGET_PROCESS_SDK_VERSION_OVERRIDE += \
 BOARD_FLASH_BLOCK_SIZE := 131072
 BOARD_BOOTIMAGE_PARTITION_SIZE := 10485760
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 10485760
-BOARD_CACHEIMAGE_PARTITION_SIZE := 721420288
-BOARD_SYSTEMIMAGE_PARTITION_SIZE := 2097152000
-BOARD_USERDATAIMAGE_PARTITION_SIZE := 12562627584
+BOARD_CACHEIMAGE_PARTITION_SIZE := 314572800
+BOARD_SYSTEMIMAGE_PARTITION_SIZE := 2362232012
+BOARD_USERDATAIMAGE_PARTITION_SIZE := 12884901888
 
 # Power HAL
 TARGET_POWERHAL_SET_INTERACTIVE_EXT := $(COMMON_PATH)/power/power_ext.c
@@ -112,4 +105,5 @@ endif
 TARGET_USE_SDCLANG := true
 
 # inherit from the proprietary version
--include vendor/samsung/s3ve3g-common/BoardConfigVendor.mk
+-include vendor/samsung/matisse-common/BoardConfigVendor.mk
+
