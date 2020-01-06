@@ -93,6 +93,7 @@ BOARD_RECOVERY_SWIPE := true
 TARGET_RECOVERY_FSTAB := $(COMMON_PATH)/rootdir/etc/fstab.qcom
 
 # SELinux
+CONFIG_MATISSE_SEPOLICY_TYPE := temporary
 include $(COMMON_PATH)/sepolicy/sepolicy.mk
 
 # Sensors
