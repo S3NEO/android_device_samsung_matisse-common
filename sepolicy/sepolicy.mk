@@ -15,10 +15,5 @@
 #
 
 # Board specific SELinux policy variable definitions
-ifeq ($(CONFIG_MATISSE_SEPOLICY_TYPE), temporary)
-BOARD_SEPOLICY_DIRS += \
-    device/samsung/matisse-common/sepolicy/temporary
-else
 BOARD_SEPOLICY_DIRS += \
     device/samsung/matisse-common/sepolicy/common
-endif
