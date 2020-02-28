@@ -49,7 +49,7 @@ void vendor_load_properties()
         set_ro_product_prop("fingerprint", "samsung/matissewifixx/matissewifi:5.0.2/LRX22G/T530XXS1BRH1:user/release-keys");
         set_ro_product_prop("model", "SM-T530");
         set_ro_product_prop("name", "matissewifi");
-        wifi_properties();
+        wifi_properties("wifi-only", "1");
     } else if (bootloader.find("T530NU") == 0) {
         /* matissewifiue */
         property_override("ro.build.description", "matissewifiue-user 5.0.2 LRX22G T530NUUEU1BQC1 release-keys");
@@ -57,7 +57,7 @@ void vendor_load_properties()
         set_ro_product_prop("fingerprint", "samsung/matissewifiue/matissewifiue:5.0.2/LRX22G/T530NUUEU1BQC1:user/release-keys");
         set_ro_product_prop("model", "SM-T530NU");
         set_ro_product_prop("name", "matissewifiue");
-        wifi_properties();
+        wifi_properties("wifi-only", "1");
     } else if (bootloader.find("T531XX") == 0) {
         /* matisse3gxx */
         property_override("ro.build.description", "matisse3gxx-user 5.0.2 LRX22G T531XXS1BRH1 release-keys");
@@ -65,7 +65,7 @@ void vendor_load_properties()
         set_ro_product_prop("fingerprint", "samsung/matisse3gxx/matisse3g:5.0.2/LRX22G/T531XXS1BRH1:user/release-keys");
         set_ro_product_prop("model", "SM-T531");
         set_ro_product_prop("name", "matisse3g");
-        gsm_properties();
+        gsm_properties("3", "0");
     } else if (bootloader.find("T532XX") == 0) {
         /* matisse3gjvxx */
         property_override("ro.build.description", "matisse3gjv-user 5.0.2 LRX22G T532JVS1BQB1 release-keys");
@@ -73,7 +73,7 @@ void vendor_load_properties()
         set_ro_product_prop("fingerprint", "samsung/matisse3gjv/matisse3g:5.0.2/LRX22G/T532JVS1BQB1:user/release-keys");
         set_ro_product_prop("model", "SM-T532");
         set_ro_product_prop("name", "matisse3gjv");
-        gsm_properties();
+        gsm_properties("3", "0");
     } else if (bootloader.find("T535XX") == 0) {
         /* matisseltexx */
         property_override("ro.build.description", "matisseltexx-user 5.0.2 LRX22G T535XXS1BRJ2 release-keys");
@@ -81,9 +81,9 @@ void vendor_load_properties()
         set_ro_product_prop("fingerprint", "samsung/matisseltexx/matisselte:5.0.2/LRX22G/T535XXS1BRJ2:user/release-keys");
         set_ro_product_prop("model", "SM-T535");
         set_ro_product_prop("name", "matisselte");
-        lte_properties();
+        gsm_properties("9", "1");
     } else {
-        wifi_properties();
+        wifi_properties("wifi-only", "1");
     }
     
     std::string device = GetProperty("ro.product.device", "");
