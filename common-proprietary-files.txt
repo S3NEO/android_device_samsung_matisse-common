@@ -34,7 +34,6 @@ vendor/lib/rfsa/adsp/libfastcvadsp_skel.so|9eb9499087e8cbd87aef57b25eb306a3ea481
 vendor/lib/rfsa/adsp/libscveT2T_skel.so|9eb9499087e8cbd87aef57b25eb306a3ea481524
 
 # Bluetooth - Pinned to Samsung Galaxy S5 Mini G800HXXU1CRJ1_G800HXEO1CRJ1
-bin/btnvtool:vendor/bin/btnvtool|3b518f5626d211930c0d63e4b2680797c6c7a4d5
 bin/hci_qcomm_init:vendor/bin/hci_qcomm_init|e78812bdcf2ea3ac4352d3e5ffaae8a9223fdf0f
 vendor/lib/libbtnv.so|2061b485bc848df502cf6d009e6d59781ef49768
 
