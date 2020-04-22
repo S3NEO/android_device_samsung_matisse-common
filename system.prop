@@ -97,6 +97,9 @@ ro.nfc.port=I2C
 # Perf
 ro.vendor.extension_library=/vendor/lib/libqti-perfd-client.so
 
+# Rotate Lockscreen
+lockscreen.rot_override=true
+
 # Sensors
 ro.qc.sdk.gestures.camera=false
 ro.qc.sdk.camera.facialproc=false
