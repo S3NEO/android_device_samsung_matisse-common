@@ -59,7 +59,6 @@ TARGET_KERNEL_SOURCE := kernel/samsung/msm8226
 TARGET_INIT_VENDOR_LIB := libinit_matisse
 
 # Legacy BLOB Support
-TARGET_NEEDS_PLATFORM_TEXT_RELOCATIONS := true
 TARGET_PROCESS_SDK_VERSION_OVERRIDE += \
     /system/bin/mediaserver=22 \
     /system/vendor/bin/mm-qcamera-daemon=22 \
