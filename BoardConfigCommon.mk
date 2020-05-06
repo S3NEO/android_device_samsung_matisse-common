@@ -57,7 +57,7 @@ LZMA_RAMDISK_TARGETS := recovery
 TARGET_KERNEL_SOURCE := kernel/samsung/msm8226
 
 # Init
-TARGET_INIT_VENDOR_LIB := libinit_matisse
+TARGET_INIT_VENDOR_LIB := //$(COMMON_PATH):libinit_matisse
 
 # Legacy BLOB Support
 TARGET_LD_SHIM_LIBS += \
