@@ -73,7 +73,19 @@ void property_override(char const prop[], char const value[], bool add = true)
     }
 }
 
-void set_wifionly()
+void hspa_properties()
+{
+    property_set("ro.telephony.default_network", "3");
+    property_set("telephony.lteOnGsmDevice", "0");
+}
+
+void lte_properties()
+{
+    property_set("ro.telephony.default_network", "9");
+    property_set("telephony.lteOnGsmDevice", "1");
+}
+
+void wifi_only_properties()
 {
     property_set("ro.carrier", "wifi-only");
     property_set("ro.radio.noril", "1");
@@ -81,53 +93,56 @@ void set_wifionly()
 
 void vendor_load_properties()
 {
-	
+    
     const auto set_ro_product_prop = [](const std::string &source,
             const std::string &prop, const std::string &value) {
         auto prop_name = "ro.product." + source + prop;
         property_override(prop_name.c_str(), value.c_str(), false);
     };
 
-	std::string bootloader = GetProperty("ro.bootloader", "");
-	if (bootloader.find("T530NU") == 0) {
-		/* matissewifiue */
+    std::string bootloader = GetProperty("ro.bootloader", "");
+    if (bootloader.find("T530NU") == 0) {
+        /* matissewifiue */
         for (const auto &source : ro_product_props_default_source_order) {
             set_ro_product_prop(source, "fingerprint", "samsung/matissewifiue/matissewifi:5.0.2/LRX22G/T530NUU1BOJ4:user/release-keys");
             set_ro_product_prop(source, "model", "SM-T530NU");
             set_ro_product_prop(source, "device", "matissewifi");
         }
-		property_override("ro.build.description", "matissewifiue-user 5.0.2 LRX22G T530NUU1BOJ4 release-keys");
-		set_wifionly();
-	} else if (bootloader.find("T530XX") == 0) {
-		/* matissewifixx */
+        property_override("ro.build.description", "matissewifiue-user 5.0.2 LRX22G T530NUU1BOJ4 release-keys");
+        wifi_only_properties();
+    } else if (bootloader.find("T530XX") == 0) {
+        /* matissewifixx */
         for (const auto &source : ro_product_props_default_source_order) {
             set_ro_product_prop(source, "fingerprint", "samsung/matissewifixx/matissewifi:5.0.2/LRX22G/T530XXU1BOJ4:user/release-keys");
             set_ro_product_prop(source, "model", "SM-T530");
             set_ro_product_prop(source, "device", "matissewifi");
         }
-		property_override("ro.build.description", "matissewifixx-user 5.0.2 LRX22G T530XXU1BOJ4 release-keys");
-		set_wifionly();
-	} else if (bootloader.find("T531XX") == 0) {
-		/* matisse3gxx */
+        property_override("ro.build.description", "matissewifixx-user 5.0.2 LRX22G T530XXU1BOJ4 release-keys");
+        wifi_only_properties();
+    } else if (bootloader.find("T531XX") == 0) {
+        /* matisse3gxx */
         for (const auto &source : ro_product_props_default_source_order) {
             set_ro_product_prop(source, "fingerprint", "samsung/matisse3gxx/matisse3g:5.0.2/LRX22G/T531XXU1BOE6:user/release-keys");
             set_ro_product_prop(source, "model", "SM-T531");
             set_ro_product_prop(source, "device", "matisse3g");
         }
-		property_override("ro.build.description", "matisse3gxx-user 5.0.2 LRX22G T531XXU1BOE6 release-keys");
-	} else if (bootloader.find("T535XX") == 0) {
-		/* matisseltexx */
+        property_override("ro.build.description", "matisse3gxx-user 5.0.2 LRX22G T531XXU1BOE6 release-keys");
+        hspa_properties();
+    } else if (bootloader.find("T535XX") == 0) {
+        /* matisseltexx */
         for (const auto &source : ro_product_props_default_source_order) {
             set_ro_product_prop(source, "fingerprint", "samsung/matisseltexx/matisselte:5.0.2/LRX22G/T535XXU1BOL1:user/release-keys");
             set_ro_product_prop(source, "model", "SM-T535");
             set_ro_product_prop(source, "device", "matisselte");
         }
-		property_override("ro.build.description", "matisseltexx-user 5.0.2 LRX22G T535XXU1BOL1 release-keys");
-	} else {
-		set_wifionly();
-	}
-	
-	std::string device = GetProperty("ro.product.device", "");
-	LOG(ERROR) << "Found bootloader id " << bootloader <<  " setting build properties for "
-	<< device <<  " device" << std::endl;
+        property_override("ro.build.description", "matisseltexx-user 5.0.2 LRX22G T535XXU1BOL1 release-keys");
+        lte_properties();
+    } else {
+        wifi_only_properties();
+    }
+    
+    std::string device = GetProperty("ro.product.device", "");
+    LOG(ERROR) << "Found bootloader id " << bootloader <<  " setting build properties for "
+    << device <<  " device" << std::endl;
 }
+
