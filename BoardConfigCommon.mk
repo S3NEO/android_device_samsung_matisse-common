@@ -38,6 +38,9 @@ TARGET_BOOTLOADER_BOARD_NAME := MSM8226
 # Build
 BLOCK_BASED_OTA := true
 
+# Build Fingerprint
+BUILD_FINGERPRINT := samsung/matissewifixx/matissewifi:5.0.2/LRX22G/T530XXS1BRH1:user/release-keys
+
 # Extended Filesystem Support
 TARGET_EXFAT_DRIVER := sdfat
 
