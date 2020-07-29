@@ -1,0 +1,2 @@
+allow healthd healthd:capability { dac_override };
+allow healthd proc_last_kmsg:file { read open };

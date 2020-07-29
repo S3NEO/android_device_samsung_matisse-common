@@ -1,0 +1,7 @@
+allow charger charger:capability { dac_override dac_read_search };
+allow charger device:dir { read open };
+allow charger proc_last_kmsg:file { read open };
+
+userdebug_or_eng(`
+  permissive charger;
+')
