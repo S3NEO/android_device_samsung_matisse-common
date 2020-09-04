@@ -24,7 +24,6 @@ TARGET_SCREEN_HEIGHT := 1280
 TARGET_SCREEN_WIDTH := 800   
 TARGET_BOOTANIMATION_HALF_RES := true
 
-
 # Audio
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/audio_effects.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects.xml \
@@ -36,10 +35,6 @@ PRODUCT_COPY_FILES += \
     frameworks/av/services/audiopolicy/config/default_volume_tables.xml:$(TARGET_COPY_OUT_VENDOR)/etc/default_volume_tables.xml \
     frameworks/av/services/audiopolicy/config/r_submix_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/r_submix_audio_policy_configuration.xml \
     frameworks/av/services/audiopolicy/config/usb_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/usb_audio_policy_configuration.xml
-
-# Camera
-PRODUCT_PACKAGES += \
-    Camera2
 
 # Device is a tablet
 PRODUCT_CHARACTERISTICS  := tablet
@@ -110,6 +105,7 @@ PRODUCT_COPY_FILES += \
 # Get non-open-source specific aspects
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_k.mk)
 $(call inherit-product-if-exists, vendor/samsung/matisse-common/matisse-common-vendor.mk)
+
 # common msm8226
 $(call inherit-product, device/samsung/msm8226-common/msm8226.mk)
 
