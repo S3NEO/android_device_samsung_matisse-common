@@ -57,7 +57,6 @@ ro.qc.sdk.izat.service_mask=0x0
 # HDMI
 ro.hdmi.enable=true
 persist.demo.hdmirotationlock=false
-ro.hdmi.enable=true
 
 # HWUI
 debug.hwui.renderer=opengl
