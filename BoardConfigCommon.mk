@@ -37,6 +37,9 @@ BLOCK_BASED_OTA := true
 # Build Fingerprint
 BUILD_FINGERPRINT := samsung/matissewifixx/matissewifi:5.0.2/LRX22G/T530XXS1BRH1:user/release-keys
 
+# Camera
+TARGET_NEEDS_TEXT_RELOCATIONS := true
+
 # Extended Filesystem Support
 TARGET_EXFAT_DRIVER := sdfat
 
