@@ -1,1 +1,2 @@
 allow untrusted_app sysfs_net:dir search;
+allow untrusted_app proc:file { read open getattr };
