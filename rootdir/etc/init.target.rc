@@ -24,19 +24,6 @@
 # OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
 # ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-on post-fs-data
-    # Permissions for svc led
-    chown system system /sys/class/sec/led/led_r
-    chown system system /sys/class/sec/led/led_g
-    chown system system /sys/class/sec/led/led_b
-    chown system system /sys/class/sec/led/led_pattern
-    chown system system /sys/class/sec/led/led_blink
-    chown system system /sys/class/sec/led/led_lowpower
-
-    # For disabling softkeys *FIXME*
-    chown root system /sys/class/leds/button-backlight/max_brightness
-    chmod 0664 /sys/class/leds/button-backlight/max_brightness    
-    
 on boot
     # Accelerometer_sensor
     chown system radio /sys/class/sensors/accelerometer_sensor/raw_data
@@ -52,12 +39,6 @@ on boot
     chown system radio /sys/class/sensors/gyro_sensor/vendor
     chown system radio /sys/class/sensors/gyro_sensor/name
 
-    # Light_sensor
-    chown system radio /sys/class/sensors/light_sensor/lux
-    chown system radio /sys/class/sensors/light_sensor/raw_data
-    chown system radio /sys/class/sensors/light_sensor/vendor
-    chown system radio /sys/class/sensors/light_sensor/name
-
     # Magnetic_sensor
     chown system radio /sys/class/sensors/magnetic_sensor/selftest
     chown system radio /sys/class/sensors/magnetic_sensor/raw_data
@@ -69,14 +50,6 @@ on boot
     chown system radio /sys/class/sec/sec_ir/ir_send_result
     chown system system /dev/ice4_dev
     chmod 0660 /dev/ice4_dev
-
-    # Proximity_sensor
-    chown system radio /sys/class/sensors/proximity_sensor/state
-    chown system radio /sys/class/sensors/proximity_sensor/prox_avg
-    chown system radio /sys/class/sensors/proximity_sensor/prox_cal
-    chown system radio /sys/class/sensors/proximity_sensor/prox_tresh
-    chown system radio /sys/class/sensors/proximity_sensor/vendor
-    chown system radio /sys/class/sensors/proximity_sensor/name
 
     # Sensors
     chown system system /efs/FactoryApp/baro_delta
