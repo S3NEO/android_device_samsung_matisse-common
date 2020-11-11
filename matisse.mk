@@ -38,9 +38,8 @@ PRODUCT_COPY_FILES += \
 # Device is a tablet
 PRODUCT_CHARACTERISTICS  := tablet
 
-# Device uses high-density artwork where available
-PRODUCT_AAPT_CONFIG      := xlarge large
-PRODUCT_AAPT_PREF_CONFIG := xhdpi
+PRODUCT_AAPT_CONFIG      := normal
+PRODUCT_AAPT_PREF_CONFIG := mdpi
 
 # Doze
 PRODUCT_PACKAGES += \
