@@ -1,4 +1,4 @@
-# Samsung Package Version: T530XXS1BRH1_T530BTU1BRI1, unless pinned
+# Samsung Package Version: T535XXS1BRJ2_T535COS1BRK1, unless pinned
 
 # Activity recognition
 vendor/lib/libsensor1.so
@@ -38,7 +38,6 @@ bin/hci_qcomm_init:vendor/bin/hci_qcomm_init|e78812bdcf2ea3ac4352d3e5ffaae8a9223
 vendor/lib/libbtnv.so|2061b485bc848df502cf6d009e6d59781ef49768
 
 # Camera
-bin/mm-qcamera-daemon:vendor/bin/mm-qcamera-daemon
 lib/hw/camera.vendor.msm8226.so:vendor/lib/hw/camera.vendor.msm8226.so
 lib/libmmcamera2_stats_algorithm.so:vendor/lib/libmmcamera2_stats_algorithm.so
 lib/libmmcamera_cac2_lib.so:vendor/lib/libmmcamera_cac2_lib.so
@@ -46,7 +45,6 @@ lib/libmmcamera_cac.so:vendor/lib/libmmcamera_cac.so
 lib/libmmcamera_fidelix_eeprom.so:vendor/lib/libmmcamera_fidelix_eeprom.so
 lib/libmmcamera_interface.so:vendor/lib/libmmcamera_interface.so
 lib/libmmcamera_wavelet_lib.so:vendor/lib/libmmcamera_wavelet_lib.so
-lib/libmmjpeg_interface.so:vendor/lib/libmmjpeg_interface.so
 lib/libqomx_core.so:vendor/lib/libqomx_core.so
 vendor/lib/libactuator_ak7345_camcorder.so
 vendor/lib/libactuator_ak7345_camera.so
@@ -54,8 +52,6 @@ vendor/lib/libactuator_dw9804_camcorder.so
 vendor/lib/libactuator_dw9804_camera.so
 vendor/lib/libactuator_dw9804k_camcorder.so
 vendor/lib/libactuator_dw9804k_camera.so
-vendor/lib/libjpegdhw.so
-vendor/lib/libjpegehw.so
 vendor/lib/libmmcamera2_c2d_module.so
 vendor/lib/libmmcamera2_cpp_module.so
 vendor/lib/libmmcamera2_iface_modules.so
@@ -86,15 +82,21 @@ vendor/lib/libmmcamera_sr130pc20.so
 vendor/lib/libmmcamera_sr200pc20.so
 vendor/lib/libmmcamera_sr352.so
 vendor/lib/libmmipl.so
-vendor/lib/libmmjpeg.so
-vendor/lib/libmmqjpeg_codec.so
 vendor/lib/libmmQSM.so
 vendor/lib/liboemcamera.so
 vendor/lib/libqomx_jpegdec.so
 vendor/lib/libqomx_jpegenc.so
 vendor/lib/libmm-color-convertor.so
 
-# Camera Chormatix
+# Camera - Pinned to S5 Mini G800HXXU1CRJ1_G800HXEO1CRJ1
+bin/mm-qcamera-daemon:vendor/bin/mm-qcamera-daemon|e8f1a853f6423ad0f9d5c2981b9a4195568d54bf
+lib/libmmjpeg_interface.so:vendor/lib/libmmjpeg_interface.so|20b3ae264db08802a6eba7e5fffb039004321bb0
+vendor/lib/libjpegdhw.so|44db5419047fbbebb345fdc7b1bd152fcc772dcf
+vendor/lib/libjpegehw.so|442b8ad502c44d69ff781f047104df20b4c1b67e
+vendor/lib/libmmjpeg.so|a9eba95cb694bdf416cb562685cda2a44fd70f36
+vendor/lib/libmmqjpeg_codec.so|d77913045f9342e27c803533b19078578dc76cb0
+
+# Camera Chromatix
 lib/E08QL_libTsAe.so:vendor/lib/E08QL_libTsAe.so
 lib/E08QL_libTsAf.so:vendor/lib/E08QL_libTsAf.so
 lib/E08QL_libTs_J_Accm.so:vendor/lib/E08QL_libTs_J_Accm.so
