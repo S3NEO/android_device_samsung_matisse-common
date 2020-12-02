@@ -39,44 +39,49 @@ vendor/lib/libbtnv.so|2061b485bc848df502cf6d009e6d59781ef49768
 
 # Camera
 lib/hw/camera.vendor.msm8226.so:vendor/lib/hw/camera.vendor.msm8226.so
-lib/libmmcamera2_stats_algorithm.so:vendor/lib/libmmcamera2_stats_algorithm.so
-lib/libmmcamera_cac2_lib.so:vendor/lib/libmmcamera_cac2_lib.so
-lib/libmmcamera_cac.so:vendor/lib/libmmcamera_cac.so
-lib/libmmcamera_fidelix_eeprom.so:vendor/lib/libmmcamera_fidelix_eeprom.so
-lib/libmmcamera_interface.so:vendor/lib/libmmcamera_interface.so
-lib/libmmcamera_wavelet_lib.so:vendor/lib/libmmcamera_wavelet_lib.so
-lib/libqomx_core.so:vendor/lib/libqomx_core.so
-vendor/lib/libmmcamera2_c2d_module.so
-vendor/lib/libmmcamera2_cpp_module.so
-vendor/lib/libmmcamera2_iface_modules.so
-vendor/lib/libmmcamera2_imglib_modules.so
-vendor/lib/libmmcamera2_isp_modules.so
-vendor/lib/libmmcamera2_pproc_modules.so
 vendor/lib/libmmcamera2_sensor_modules.so
-vendor/lib/libmmcamera2_stats_modules.so
-vendor/lib/libmmcamera2_vpe_module.so
-vendor/lib/libmmcamera2_wnr_module.so
-vendor/lib/libmmcamera_faceproc.so
-vendor/lib/libmmcamera_hdr_gb_lib.so
-vendor/lib/libmmcamera_image_stab.so
-vendor/lib/libmmcamera_imglib.so
-vendor/lib/libmmcamera_rohm_brce064gwz_eeprom.so
 vendor/lib/libmmcamera_sr130pc20.so
 vendor/lib/libmmcamera_sr352.so
-vendor/lib/libmm-color-convertor.so
-vendor/lib/libmmipl.so
-vendor/lib/libmmQSM.so
-vendor/lib/liboemcamera.so
-vendor/lib/libqomx_jpegdec.so
-vendor/lib/libqomx_jpegenc.so
 
-# Camera - Pinned to S5 Mini G800HXXU1CRJ1_G800HXEO1CRJ1
+# Camera - Pinned to Samsung Galaxy S5 Mini G800HXXU1CRJ1_G800HXEO1CRJ1
 bin/mm-qcamera-daemon:vendor/bin/mm-qcamera-daemon|e8f1a853f6423ad0f9d5c2981b9a4195568d54bf
+lib/libaec_algo_front.so:vendor/lib/libaec_algo_front.so|d44509f91664b93d0ef0a5e2897d816bdbca35cf
+lib/libaec_algo_rear.so:vendor/lib/libaec_algo_rear.so|bb004a19a10126ade29950571abf13dfc117352d
+lib/libaf_algo_rear.so:vendor/lib/libaf_algo_rear.so|c8ae6ac3b8b885f884960de0ce3890e5f46abab3
+lib/libawb_algo_front.so:vendor/lib/libawb_algo_front.so|a8959f79a4c00cf1e030ba9d5a3696390d089605
+lib/libawb_algo_rear.so:vendor/lib/libawb_algo_rear.so|de8086bb9e0fd02e311a4e1db14f12ddf06963e8
+lib/libmmcamera2_stats_algorithm.so:vendor/lib/libmmcamera2_stats_algorithm.so|8b3c1e8e8f452729680432a52d1b657926ac8796
+lib/libmmcamera_cac2_lib.so:vendor/lib/libmmcamera_cac2_lib.so|9a3a82a3ad38f58315125159aa24fd55b64a42d0
+lib/libmmcamera_cac.so:vendor/lib/libmmcamera_cac.so|05acdf927036e734b741baf258f3b9d2187a4475
+lib/libmmcamera_fidelix_eeprom.so:vendor/lib/libmmcamera_fidelix_eeprom.so|eb8dedb4ce3a01c137fedcfd3523d052528be99a
+lib/libmmcamera_interface.so:vendor/lib/libmmcamera_interface.so|2aed89c5bfe99d98c0357c0a10b1b397dc6f5053
+lib/libmmcamera_wavelet_lib.so:vendor/lib/libmmcamera_wavelet_lib.so|ad446f3757eb6bf46ce2564b862ad5262c10431a
 lib/libmmjpeg_interface.so:vendor/lib/libmmjpeg_interface.so|20b3ae264db08802a6eba7e5fffb039004321bb0
+lib/libqomx_core.so:vendor/lib/libqomx_core.so|c2e1edd65344e714855559e2eae2c07792c2837d
 vendor/lib/libjpegdhw.so|44db5419047fbbebb345fdc7b1bd152fcc772dcf
 vendor/lib/libjpegehw.so|442b8ad502c44d69ff781f047104df20b4c1b67e
+vendor/lib/libmmcamera2_c2d_module.so|30714e50e55bb00ec67d3efbf4e964d781628a99
+vendor/lib/libmmcamera2_cpp_module.so|f7e40bf3618d30701267cdc8fcd14c4885eba29d
+vendor/lib/libmmcamera2_iface_modules.so|6aa01c1e9783132fe6f526406b4c298c745c47a8
+vendor/lib/libmmcamera2_imglib_modules.so|7cafe228cf069b2ca3a03d8cc96f83f581e937df
+vendor/lib/libmmcamera2_isp_modules.so|873225a3d2cd0a93014bc99d16b732a229647e90
+vendor/lib/libmmcamera2_pproc_modules.so|801437af8ff46f89fad48db3c064bf52bdae679b
+vendor/lib/libmmcamera2_stats_modules.so|a7e8b363d80394231342d3105de5dbb89424196c
+vendor/lib/libmmcamera2_vpe_module.so|e47c68253e61a053734ed0d8974d6a617f83830e
+vendor/lib/libmmcamera2_wnr_module.so|ee2a776f58d144a0756d6787ebce35c7e694c7c6
+vendor/lib/libmmcamera_faceproc.so|8a3c342c3b1ab82f735ff2331fc484d49a2b3941
+vendor/lib/libmmcamera_hdr_gb_lib.so|4d567a38e4e160298f865f16411767453807e06d
+vendor/lib/libmmcamera_image_stab.so|1eb089a7b5d1f4a17c586df19853c37aa96f9094
+vendor/lib/libmmcamera_imglib.so|ff9cbe8b9748134b97cda8ea0e5765a4dfda7e4e
+vendor/lib/libmmcamera_rohm_brce064gwz_eeprom.so|5a6c6859cdfb9791202c2a6bfa833385c6d247e0
+vendor/lib/libmm-color-convertor.so|70e0a0e5e40c75cb9eccf88a85f42721968b8f00
+vendor/lib/libmmipl.so|c2f2f41783be310a426266628854dbe24993bd5a
 vendor/lib/libmmjpeg.so|a9eba95cb694bdf416cb562685cda2a44fd70f36
 vendor/lib/libmmqjpeg_codec.so|d77913045f9342e27c803533b19078578dc76cb0
+vendor/lib/libmmQSM.so|4a33cd7fcecad6f0b8e899abdad8895919b8cf93
+vendor/lib/liboemcamera.so|e0236146bda20629f9e4588271877ce3dab4d127
+vendor/lib/libqomx_jpegdec.so|9791c5622abba66a03519a41d9b25f46167bdb99
+vendor/lib/libqomx_jpegenc.so|f9851c4ecf966915bbacbf1e83691302b70c224c
 
 # Camera Chromatix
 lib/libAfSingle.so:vendor/lib/libAfSingle.so
@@ -109,7 +114,7 @@ vendor/lib/libQSEEComAPI.so|73a760768f621ea48a8e3bb83e0cbbce5937cdf5
 vendor/lib/librpmb.so|32b75d07607193bcc81fe871d98ceb720fd210e4
 vendor/lib/libssd.so|f7216c09cd17a94fb946179503cd286262be9de8
 
-# DRM - Pinned to S5 Mini G800HXXU1CRJ1_G800HXEO1CRJ1
+# DRM - Pinned to Samsung Galaxy S5 Mini G800HXXU1CRJ1_G800HXEO1CRJ1
 lib/libdrmdecrypt.so:vendor/lib/libdrmdecrypt.so|a79248704d988a8e1930c3a79212e8588c07bfff
 
 # IPC router security - Pinned to Samsung Galaxy S5 G900FXXU1CRH1_G900FOXA1CRH1_BTU
@@ -161,7 +166,7 @@ lib/libcordon.so:vendor/lib/libcordon.so
 lib/libfactoryutil.so:vendor/lib/libfactoryutil.so
 lib/libomission_avoidance.so:vendor/lib/libomission_avoidance.so
 
-# Radio - Pinned to G900FXXS1BPCL_G900FOXA1BOJ1_BTU
+# Radio - Pinned to Samsung Galaxy S5 G900FXXS1BPCL_G900FOXA1BOJ1_BTU
 bin/efsks:vendor/bin/efsks|2c366ac7ab878068c77e5598c411a48cf47b056a
 bin/ks:vendor/bin/ks|949406ae5d1b74034b3828af1905a181e4b69961
 bin/qcks:vendor/bin/qcks|9026c84f32e1ee5121024c72b878c09dfde95e5b
@@ -170,7 +175,7 @@ bin/rfs_access:vendor/bin/rfs_access|49a8516ed01b609a9e5079d8135b75db5b024236
 bin/rmt_storage:vendor/bin/rmt_storage|000ddcabfc9416e9a27ba6d04860cc14b6803cdd
 vendor/lib/libril-qcril-hook-oem.so|6a73ed46f4fbcb283eea5fb44b24a7d14522bfe5
 
-# Radio - Pinned to S5 Mini G800HXXU1CRJ1_G800HXEO1CRJ1
+# Radio - Pinned to Samsung Galaxy S5 Mini G800HXXU1CRJ1_G800HXEO1CRJ1
 bin/ds_fmc_appd:vendor/bin/ds_fmc_appd|80eb4cd64d23a82a9a8c2aeafa9128d5e8158bdd
 vendor/lib/libdsnetutils.so|bf7097980412a364c941aefcadfbe89066fdecf1
 vendor/lib/libdsucsd.so|1f739bcb91330edb307329f851f031d56723672f
@@ -179,7 +184,7 @@ vendor/lib/libdsucsd.so|1f739bcb91330edb307329f851f031d56723672f
 lib/hw/sensors.msm8226.so:vendor/lib/hw/sensors.vendor.msm8226.so
 
 # Time services
--app/TimeService/TimeService.apk|a1c0da0af9f3c3757a8fe04520011e2137def584
-bin/time_daemon:vendor/bin/time_daemon|b55e8b7aa5e1a4ad71976da6a607762f8762585a
-vendor/lib/libTimeService.so|aa3036dee5a6c74b9d32a93ab13cf1ec04aa99c4
--vendor/lib/libtime_genoff.so|ffb08547c733760c151b08977a04694b4bc84df1
+-app/TimeService/TimeService.apk
+bin/time_daemon:vendor/bin/time_daemon
+vendor/lib/libTimeService.so
+-vendor/lib/libtime_genoff.so
