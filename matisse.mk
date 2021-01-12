@@ -41,10 +41,6 @@ PRODUCT_CHARACTERISTICS  := tablet
 PRODUCT_AAPT_CONFIG      := normal
 PRODUCT_AAPT_PREF_CONFIG := mdpi
 
-# Doze
-PRODUCT_PACKAGES += \
-    SamsungDoze
-
 # FlipFlap
 PRODUCT_PACKAGES += \
     FlipFlap
