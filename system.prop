@@ -51,7 +51,6 @@ ro.hdmi.enable=true
 persist.demo.hdmirotationlock=false
 
 # HWUI
-debug.hwui.renderer=opengl
 debug.hwui.use_buffer_age=false
 
 # Media
