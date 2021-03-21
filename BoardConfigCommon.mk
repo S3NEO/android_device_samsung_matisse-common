@@ -41,9 +41,6 @@ BLOCK_BASED_OTA := true
 # Build Fingerprint
 BUILD_FINGERPRINT := samsung/matissewifixx/matissewifi:5.0.2/LRX22G/T530XXS1BRH1:user/release-keys
 
-# Camera
-TARGET_NEEDS_TEXT_RELOCATIONS := true
-
 # Charger
 BOARD_NO_CHARGER_LED := true
 BOARD_CHARGER_DISABLE_INIT_BLANK := true

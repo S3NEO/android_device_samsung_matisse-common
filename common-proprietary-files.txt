@@ -69,7 +69,6 @@ vendor/lib/libmmcamera2_pproc_modules.so|801437af8ff46f89fad48db3c064bf52bdae679
 vendor/lib/libmmcamera2_stats_modules.so|a7e8b363d80394231342d3105de5dbb89424196c
 vendor/lib/libmmcamera2_vpe_module.so|e47c68253e61a053734ed0d8974d6a617f83830e
 vendor/lib/libmmcamera2_wnr_module.so|ee2a776f58d144a0756d6787ebce35c7e694c7c6
-vendor/lib/libmmcamera_faceproc.so|8a3c342c3b1ab82f735ff2331fc484d49a2b3941
 vendor/lib/libmmcamera_hdr_gb_lib.so|4d567a38e4e160298f865f16411767453807e06d
 vendor/lib/libmmcamera_image_stab.so|1eb089a7b5d1f4a17c586df19853c37aa96f9094
 vendor/lib/libmmcamera_imglib.so|ff9cbe8b9748134b97cda8ea0e5765a4dfda7e4e
@@ -82,6 +81,9 @@ vendor/lib/libmmQSM.so|4a33cd7fcecad6f0b8e899abdad8895919b8cf93
 vendor/lib/liboemcamera.so|e0236146bda20629f9e4588271877ce3dab4d127
 vendor/lib/libqomx_jpegdec.so|9791c5622abba66a03519a41d9b25f46167bdb99
 vendor/lib/libqomx_jpegenc.so|f9851c4ecf966915bbacbf1e83691302b70c224c
+
+# Camera - Pinned to shamu-user 7.1.1 N8I11F 4345189 release-keys
+vendor/lib/libmmcamera_faceproc.so|ac49bcc1aa20ff9f2c118f6c233b658f93543202
 
 # Camera Chromatix
 lib/libAfSingle.so:vendor/lib/libAfSingle.so
