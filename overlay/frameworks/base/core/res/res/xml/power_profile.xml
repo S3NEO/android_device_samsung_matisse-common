@@ -21,11 +21,13 @@
         <value>4</value>
     </array>    
     <array name="cpu.core_speeds.cluster0">
-        <value>12000000</value>
-        <value>10000000</value>
-        <value>800000</value>
-        <value>500000</value>
-        <value>200000</value>
+        <value>1190400</value>
+        <value>1094400</value>
+        <value>998400</value>
+        <value>787200</value>
+        <value>600000</value>
+        <value>384000</value>
+        <value>300000</value>
     </array>
     <item name="cpu.suspend">4</item>
     <array name="cpu.core_power.cluster0">
