@@ -24,10 +24,6 @@
 # OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
 # ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-on post-fs-data
-    # Create /data/time folder for time-services
-    mkdir /data/time/ 0700 system system
-
 on boot
     # Accelerometer_sensor
     chown system radio /sys/class/sensors/accelerometer_sensor/raw_data
@@ -66,9 +62,3 @@ on boot
 
 on charger
     write /sys/class/leds/lcd-backlight/brightness 150
-
-service time_daemon /vendor/bin/time_daemon
-    capabilities SYS_TIME
-    class late_start
-    user system
-    group net_raw
