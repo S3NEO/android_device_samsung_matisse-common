@@ -45,9 +45,6 @@ BUILD_FINGERPRINT := samsung/matissewifixx/matissewifi:5.0.2/LRX22G/T530XXS1BRH1
 BOARD_NO_CHARGER_LED := true
 BOARD_CHARGER_DISABLE_INIT_BLANK := true
 
-# Display
-TARGET_SCREEN_DENSITY := 160
-
 # Extended Filesystem Support
 TARGET_EXFAT_DRIVER := sdfat
 

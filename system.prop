@@ -27,6 +27,9 @@ ro.qualcomm.bt.hci_transport=smd
 # Camera
 camera2.portability.force_api=1
 
+# Display
+ro.sf.lcd_density=160
+
 # GPS
 persist.gps.qc_nlp_in_use=0
 ro.gps.agps_provider=1
